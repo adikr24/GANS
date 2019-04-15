@@ -1,0 +1,19 @@
+Generalized Neural Networks or GANS
+
+Gans are an upcoming algorithm in machine learning where a different approach of training can be seen. An adversary is used in training this model which is analogous to 
+police and theif example where if one tries to improve themself the other nudge their game to keep up. Hence with this mindset I have followed along some code and 
+sample problems and wanted to code my own gans
+
+### Data preparation
+Data was downloaded from pytorch datasets and Generator was trained only on 32 images from one batch
+the code starts by importing packages and then dives into model architecture where it creates a convolution network so that discriminator can be trained on real as well
+as fake data
+
+### a normal distribution with same batch size and a user def number is used to create z(image distribution). Image z when plotted can be seen to not make any sense
+as it's just a collection of random pixels but the idea behind this algorithm is to train the generator which takes in z and outputs some X(image) to fool discriminator into
+thinking that this image is original, Original Image is also fed into discriminator simultaneously. After training the model for few epochs it can be seen that 
+generator is producing some commendable images which closely resemble the original images.
+
+
+##### in my later codes i'll try to implement this idea into audio data to see if I can generate some new accents and can try and teach the computer to recognize every 
+possible accent there is.
